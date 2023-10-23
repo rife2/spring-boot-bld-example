@@ -22,11 +22,12 @@ public class DemoApplicationBuild extends BaseProject {
                         version(3,1,5)));
         scope(test)
                 .include(dependency("org.springframework.boot", "spring-boot-starter-test",
-                        version(3,1,5)));
+                        version(3,1,5)))
+                .include(dependency("org.junit.jupiter", "junit-jupiter",
+                        version(5,10,0)));
 
         testOperation().mainClass("com.example.demo.DemoApplicationTest");
     }
-
     public static void main(String[] args) {
         new DemoApplicationBuild().start(args);
     }
