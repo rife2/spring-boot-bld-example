@@ -1,6 +1,6 @@
 package com.example.springboot;
 
-import rife.bld.BaseProject;
+import rife.bld.WebProject;
 
 import java.util.List;
 
@@ -8,7 +8,7 @@ import static rife.bld.dependencies.Repository.MAVEN_CENTRAL;
 import static rife.bld.dependencies.Scope.compile;
 import static rife.bld.dependencies.Scope.test;
 
-public class ApplicationBuild extends BaseProject {
+public class ApplicationBuild extends WebProject {
     public ApplicationBuild() {
         pkg = "com.example.demo";
         name = "DemoApplication";
@@ -28,7 +28,11 @@ public class ApplicationBuild extends BaseProject {
                         version(3, 1, 5)));
         scope(test)
                 .include(dependency("org.springframework.boot", "spring-boot-starter-test",
-                        version(3, 1, 5)));
+                        version(3, 1, 5)))
+                .include(dependency("org.junit.jupiter", "junit-jupiter",
+                        version(5, 10, 0)))
+                .include(dependency("org.junit.platform", "junit-platform-console-standalone",
+                        version(1, 10, 0)));
     }
 
     public static void main(String[] args) {
