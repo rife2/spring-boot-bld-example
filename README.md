@@ -1,6 +1,6 @@
 # Spring Boot Example for [b<span style="color:orange">l</span>d](https://rife2.com/bld)
 
-Based on the Spring Guides' Spring Boot web application example. Please be sure to read the [guide](https://github.com/spring-guides/gs-spring-boot) to a sampling of how Spring Boot can help you accelerate application development 
+Based on the Spring Guides' Spring Boot web application example. Please be sure to read the [guide](https://github.com/spring-guides/gs-spring-boot) for a sampling of how Spring Boot can help you accelerate application development 
 
 ## Run the Application
 
