@@ -15,6 +15,8 @@ public class ApplicationBuild extends BaseProject {
         mainClass = "com.example.springboot.Application";
         version = version(0, 1, 0);
 
+        javaRelease = 17;
+
         repositories = List.of(MAVEN_CENTRAL);
 
         scope(compile)
@@ -27,8 +29,6 @@ public class ApplicationBuild extends BaseProject {
         scope(test)
                 .include(dependency("org.springframework.boot", "spring-boot-starter-test",
                         version(3, 1, 5)));
-
-        testOperation().mainClass("com.example.springboot.HelloControllerIT");
     }
 
     public static void main(String[] args) {
