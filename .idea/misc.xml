@@ -1,4 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="EntryPointsManager">
+    <entry_points version="2.0">
+      <entry_point TYPE="field" FQNAME="com.example.springboot.HelloControllerTest mvc" />
+      <entry_point TYPE="field" FQNAME="com.example.springboot.HelloControllerIT template" />
+    </entry_points>
+    <pattern value="com.example.springboot.Application" />
+    <pattern value="com.example.springboot.ApplicationBuild" />
+    <pattern value="com.example.springboot.Application" method="commandLineRunner" />
+    <pattern value="com.example.springboot.HelloControllerIT" method="getHello" />
+    <pattern value="com.example.springboot.HelloControllerTest" method="getHello" />
+    <pattern value="com.example.springboot.HelloController" />
+    <pattern value="com.example.springboot.HelloControllerIT" />
+    <pattern value="com.example.springboot.HelloControllerTest" />
+    <pattern value="com.example.springboot.HelloController" method="index" />
+    <pattern value="com.example.springboot.Application" method="main" />
+    <pattern value="com.example.springboot.ApplicationBuild" method="main" />
+    <pattern value="com.example.springboot.HelloControllerIT" method="main" />
+  </component>
   <component name="PDMPlugin">
     <option name="skipTestSources" value="false" />
   </component>
