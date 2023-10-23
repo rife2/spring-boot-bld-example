@@ -17,22 +17,18 @@ public class ApplicationBuild extends WebProject {
 
         javaRelease = 17;
 
+        autoDownloadPurge = true;
+
         repositories = List.of(MAVEN_CENTRAL);
 
         scope(compile)
-                .include(dependency("org.springframework.boot", "spring-boot-starter",
-                        version(3, 1, 5)))
-                .include(dependency("org.springframework.boot", "spring-boot-starter-actuator",
-                        version(3, 1, 5)))
-                .include(dependency("org.springframework.boot", "spring-boot-starter-web",
-                        version(3, 1, 5)));
+                .include(dependency("org.springframework.boot:spring-boot-starter:3.1.5"))
+                .include(dependency("org.springframework.boot:spring-boot-starter-actuator:3.1.5"))
+                .include(dependency("org.springframework.boot:spring-boot-starter-web:3.1.5"));
         scope(test)
-                .include(dependency("org.springframework.boot", "spring-boot-starter-test",
-                        version(3, 1, 5)))
-                .include(dependency("org.junit.jupiter", "junit-jupiter",
-                        version(5, 10, 0)))
-                .include(dependency("org.junit.platform", "junit-platform-console-standalone",
-                        version(1, 10, 0)));
+                .include(dependency("org.springframework.boot:spring-boot-starter-test:3.1.5"))
+                .include(dependency("org.junit.jupiter:junit-jupiter:5.10.0"))
+                .include(dependency("org.junit.platform:junit-platform-console-standalone:1.10.0"));
     }
 
     public static void main(String[] args) {

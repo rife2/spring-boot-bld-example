@@ -7,7 +7,7 @@ Based on the Spring Guides' Spring Boot web application example. Please be sure 
 To run the web application, issue the following command:
 
 ```
-./bld run
+./bld compile run
 ```
 
 To access the web application, issue the follow command:
