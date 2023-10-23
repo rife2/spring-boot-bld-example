@@ -1,6 +1,6 @@
-# RIFE2 Spring Boot Example
+# Spring Boot Example for [b<span style="color:orange">l</span>d](https://rife2.com/bld)
 
-Based on the Spring Guides' [Sping Boot](https://github.com/spring-guides/gs-spring-boot) web application example.
+Based on the Spring Guides' Spring Boot web application example. Please be sure to read the [guide](https://github.com/spring-guides/gs-spring-boot) to a sampling of how Spring Boot can help you accelerate application development 
 
 ## Run the Application
 
@@ -19,7 +19,6 @@ curl localhost:8080
 To access the web application services:
 
 ```
-curl localhost:8880/
 curl localhost:8080/actuator/health
 curl localhost:8080/actuator/info
 curl localhost:8080/actuator/shutdown
