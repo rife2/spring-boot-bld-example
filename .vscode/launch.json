@@ -5,7 +5,7 @@
             "type": "java",
             "name": "Run Tests",
             "request": "launch",
-            "mainClass": "com.example.demo.DemoApplicationTest"
+            "mainClass": "com.example.springboot.DemoApplicationTests"
         }
     ]
 }
