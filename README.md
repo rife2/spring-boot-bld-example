@@ -1,6 +1,8 @@
 # Spring Boot Example for [b<span style="color:orange">l</span>d](https://rife2.com/bld)
 
-Based on the Spring Guides' Spring Boot web application example. Please be sure to read the [guide](https://github.com/spring-guides/gs-spring-boot) for a sampling of how Spring Boot can help you accelerate application development 
+Based on the Spring Guides' Spring Boot web application example. Please be sure to read the
+[guide](https://spring.io/guides/gs/spring-boot/) for a sampling of how Spring Boot can help
+you accelerate application development 
 
 ## Run the Application
 
@@ -30,4 +32,11 @@ To run the web application tests, issue the following command:
 
 ```
 ./bld test
+```
+
+## To create and launching the executable JAR
+
+```
+./bld jar
+java -jar build/dist/demoapplication-0.1.0.jar
 ```

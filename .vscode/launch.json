@@ -3,9 +3,22 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Run Main",
+            "request": "launch",
+            "mainClass": "com.example.springboot.Application"
+        },
+        {
+            "type": "java",
             "name": "Run Tests",
             "request": "launch",
-            "mainClass": "com.example.springboot.DemoApplicationTests"
+            "mainClass": "org.junit.platform.console.ConsoleLauncher",
+            "args": [
+                "--details=verbose",
+                "--scan-classpath",
+                "--disable-banner",
+                "--disable-ansi-colors",
+                "--exclude-engine=junit-platform-suite",
+                "--exclude-engine=junit-vintage"]
         }
     ]
 }

@@ -1,12 +1,13 @@
 package com.example.springboot;
 
+import rife.bld.BuildCommand;
 import rife.bld.WebProject;
+import rife.bld.extension.BootJarOperation;
 
 import java.util.List;
 
 import static rife.bld.dependencies.Repository.MAVEN_CENTRAL;
-import static rife.bld.dependencies.Scope.compile;
-import static rife.bld.dependencies.Scope.test;
+import static rife.bld.dependencies.Scope.*;
 
 public class ApplicationBuild extends WebProject {
     public ApplicationBuild() {
@@ -29,9 +30,18 @@ public class ApplicationBuild extends WebProject {
                 .include(dependency("org.springframework.boot:spring-boot-starter-test:3.1.5"))
                 .include(dependency("org.junit.jupiter:junit-jupiter:5.10.0"))
                 .include(dependency("org.junit.platform:junit-platform-console-standalone:1.10.0"));
+        scope(standalone)
+                .include(dependency("org.springframework.boot:spring-boot-loader:3.1.5"));
     }
 
     public static void main(String[] args) {
         new ApplicationBuild().start(args);
+    }
+
+    @BuildCommand(summary = "Creates an executable JAR for the project")
+    public void jar() throws Exception {
+        new BootJarOperation()
+                .fromProject(this)
+                .execute();
     }
 }
