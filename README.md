@@ -4,7 +4,7 @@ Based on the Spring Guides' Spring Boot web application example. Please be sure 
 [guide](https://spring.io/guides/gs/spring-boot/) for a sampling of how Spring Boot can help
 you accelerate application development 
 
-## Run the Application
+## Running the Application
 
 To run the web application, issue the following command:
 
@@ -26,7 +26,7 @@ curl localhost:8080/actuator/info
 curl localhost:8080/actuator/shutdown
 ```
 
-## Test the Application
+## Testing the Application
 
 To run the web application tests, issue the following command:
 
@@ -34,7 +34,7 @@ To run the web application tests, issue the following command:
 ./bld test
 ```
 
-## To create and launching the executable JAR
+## Creating and launching the executable JAR
 
 ```
 ./bld jar
