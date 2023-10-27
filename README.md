@@ -37,6 +37,6 @@ To run the web application tests, issue the following command:
 ## Creating and launching the executable JAR
 
 ```
-./bld jar
-java -jar build/dist/demoapplication-0.1.0.jar
+./bld bootjar
+java -jar build/dist/demoapplication-0.1.0-boot.jar
 ```

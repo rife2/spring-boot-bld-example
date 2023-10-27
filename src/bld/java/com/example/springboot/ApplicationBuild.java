@@ -39,9 +39,14 @@ public class ApplicationBuild extends WebProject {
     }
 
     @BuildCommand(summary = "Creates an executable JAR for the project")
-    public void jar() throws Exception {
+    public void bootjar() throws Exception {
         new BootJarOperation()
                 .fromProject(this)
                 .execute();
+    }
+
+    @BuildCommand(summary = "Creates an executable JAR for the project")
+    public void uberjar() throws Exception {
+        bootjar();
     }
 }
