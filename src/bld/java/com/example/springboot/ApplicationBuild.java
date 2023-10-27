@@ -3,6 +3,7 @@ package com.example.springboot;
 import rife.bld.BuildCommand;
 import rife.bld.WebProject;
 import rife.bld.extension.BootJarOperation;
+import rife.bld.extension.BootWarOperation;
 
 import java.util.List;
 
@@ -45,8 +46,20 @@ public class ApplicationBuild extends WebProject {
                 .execute();
     }
 
+    @BuildCommand(summary = "Create an executable WAR for the project")
+    public void bootwar() throws Exception {
+        new BootWarOperation()
+                .fromProject(this)
+                .execute();
+    }
+
     @BuildCommand(summary = "Creates an executable JAR for the project")
     public void uberjar() throws Exception {
         bootjar();
+    }
+
+    @BuildCommand(summary = "Create an executable WAR for the project")
+    public void war() throws Exception {
+        bootwar();
     }
 }
