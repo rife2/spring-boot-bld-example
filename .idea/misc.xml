@@ -17,6 +17,8 @@
     <pattern value="com.example.springboot.Application" method="main" />
     <pattern value="com.example.springboot.ApplicationBuild" method="main" />
     <pattern value="com.example.springboot.HelloControllerIT" method="main" />
+    <pattern value="com.example.springboot.ApplicationBuild" method="bootjar" />
+    <pattern value="com.example.springboot.ApplicationBuild" method="bootwar" />
   </component>
   <component name="PDMPlugin">
     <option name="customRuleSets">

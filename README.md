@@ -23,7 +23,7 @@ To access the web application services:
 ```
 curl localhost:8080/actuator/health
 curl localhost:8080/actuator/info
-curl localhost:8080/actuator/shutdown
+curl -X POST localhost:8080/actuator/shutdown
 ```
 
 ## Testing the Application
@@ -34,9 +34,16 @@ To run the web application tests, issue the following command:
 ./bld test
 ```
 
-## Creating and launching the executable JAR
+## Creating and launching the executable Java Archive (JAR)
 
 ```
 ./bld bootjar
 java -jar build/dist/demoapplication-0.1.0-boot.jar
+```
+
+## Creating and launching the executable Web Archive (WAR)
+
+```
+./bld bootwa
+java -jar build/dist/demoapplication-0.1.0-boot.war
 ```
