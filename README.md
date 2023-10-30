@@ -1,4 +1,4 @@
-# Spring Boot Web Application Example for [b<span style="color:orange">l</span>d](https://rife2.com/bld)
+# [Spring Boot](https://spring.io/projects/spring-boot) Web Application Example for [b<span style="color:orange">l</span>d](https://rife2.com/bld)
 
 Based on the Spring Guides' Spring Boot web application example. Please be sure to read the
 [guide](https://spring.io/guides/gs/spring-boot/) for a sampling of how Spring Boot can help
