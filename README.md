@@ -36,6 +36,8 @@ To run the web application tests, issue the following command:
 
 ## Creating and launching the executable Java Archive (JAR)
 
+To build and launch the executable JAR, issue the following commands:
+
 ```
 ./bld bootjar
 java -jar build/dist/demoapplication-0.1.0-boot.jar
@@ -43,7 +45,9 @@ java -jar build/dist/demoapplication-0.1.0-boot.jar
 
 ## Creating and launching the executable Web Archive (WAR)
 
+To build and launch the executable WAR, issue the following commands:
+
 ```
-./bld bootwa
+./bld bootwar
 java -jar build/dist/demoapplication-0.1.0-boot.war
 ```
