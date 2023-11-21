@@ -4,12 +4,20 @@ Based on the Spring Guides' Spring Boot web application example. Please be sure 
 [guide](https://spring.io/guides/gs/spring-boot/) for a sampling of how Spring Boot can help
 you accelerate application development 
 
-## Running the Application
+## Compile the Application
 
-To run the web application, issue the following command:
+To compile the web application, issue the following command:
 
 ```
-./bld compile run
+./bld compile
+```
+
+## Running the Application
+
+To run the compiled web application, issue the following command:
+
+```
+./bld run
 ```
 
 To access the web application, issue the follow command:
@@ -28,7 +36,7 @@ curl -X POST localhost:8080/actuator/shutdown
 
 ## Testing the Application
 
-To run the web application tests, issue the following command:
+To run the compiled web application tests, issue the following command:
 
 ```
 ./bld test
@@ -39,7 +47,7 @@ To run the web application tests, issue the following command:
 To build and launch the executable JAR, issue the following commands:
 
 ```
-./bld bootjar
+./bld compile bootjar
 java -jar build/dist/demoapplication-0.1.0-boot.jar
 ```
 
@@ -48,6 +56,6 @@ java -jar build/dist/demoapplication-0.1.0-boot.jar
 To build and launch the executable WAR, issue the following commands:
 
 ```
-./bld bootwar
+./bld compile bootwar
 java -jar build/dist/demoapplication-0.1.0-boot.war
 ```
