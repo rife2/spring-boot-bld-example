@@ -1,14 +1,14 @@
 # [Spring Boot](https://spring.io/projects/spring-boot) Web Application Example for [b<span style="color:orange">l</span>d](https://rife2.com/bld)
 
-Based on the Spring Guides' Spring Boot web application example. Please be sure to read the
-[guide](https://spring.io/guides/gs/spring-boot/) for a sampling of how Spring Boot can help
-you accelerate application development 
+Based on the Spring Guides' Spring Boot web application example. Please be sure
+to read the [guide](https://spring.io/guides/gs/spring-boot/) for a sampling of
+how Spring Boot can help you accelerate application development.
 
 ## Compile the Application
 
 To compile the web application, issue the following command:
 
-```
+```console
 ./bld compile
 ```
 
@@ -16,19 +16,19 @@ To compile the web application, issue the following command:
 
 To run the compiled web application, issue the following command:
 
-```
+```console
 ./bld run
 ```
 
 To access the web application, issue the follow command:
 
-```
+```console
 curl localhost:8080
 ```
 
 To access the web application services:
 
-```
+```console
 curl localhost:8080/actuator/health
 curl localhost:8080/actuator/info
 curl -X POST localhost:8080/actuator/shutdown
@@ -38,7 +38,7 @@ curl -X POST localhost:8080/actuator/shutdown
 
 To run the compiled web application tests, issue the following command:
 
-```
+```console
 ./bld test
 ```
 
@@ -46,7 +46,7 @@ To run the compiled web application tests, issue the following command:
 
 To build and launch the executable JAR, issue the following commands:
 
-```
+```console
 ./bld compile bootjar
 java -jar build/dist/demoapplication-0.1.0-boot.jar
 ```
@@ -55,7 +55,7 @@ java -jar build/dist/demoapplication-0.1.0-boot.jar
 
 To build and launch the executable WAR, issue the following commands:
 
-```
+```console
 ./bld compile bootwar
 java -jar build/dist/demoapplication-0.1.0-boot.war
 ```

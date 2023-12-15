@@ -20,18 +20,6 @@
     <pattern value="com.example.springboot.ApplicationBuild" method="bootjar" />
     <pattern value="com.example.springboot.ApplicationBuild" method="bootwar" />
   </component>
-  <component name="PDMPlugin">
-    <option name="customRuleSets">
-      <list>
-        <option value="K:\java\semver\config\pmd.xml" />
-        <option value="$PROJECT_DIR$/../bld-exec/config/pmd.xml" />
-        <option value="$PROJECT_DIR$/../bld-jacoco-report/config/pmd.xml" />
-        <option value="$PROJECT_DIR$/../bld-checkstyle/config/pmd.xml" />
-        <option value="$PROJECT_DIR$/../bld-testng/config/pmd.xml" />
-      </list>
-    </option>
-    <option name="skipTestSources" value="false" />
-  </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_17" project-jdk-name="17" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build" />
   </component>
