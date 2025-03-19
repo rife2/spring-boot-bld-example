@@ -34,6 +34,8 @@ public class ApplicationBuild extends WebProject {
                 .include(dependency("org.junit.platform:junit-platform-console-standalone:1.12.1"));
         scope(standalone)
                 .include(dependency("org.springframework.boot:spring-boot-loader:3.4.3"));
+
+        testOperation().javaOptions(List.of("--enable-native-access=ALL-UNNAMED", "-XX:+EnableDynamicAgentLoading"));
     }
 
     public static void main(String[] args) {
