@@ -1,14 +1,16 @@
 name: bld-ci
 
-on: [push, pull_request, workflow_dispatch]
+on: [ push, pull_request, workflow_dispatch ]
 
 jobs:
-  build-gradle-project:
-    runs-on: ubuntu-latest
-
+  build-bld-project:
     strategy:
       matrix:
-        java-version: [17, 21, 24]
+        java-version: [ 17, 21, 24 ]
+        kotlin-version: [ 1.9.25, 2.0.21, 2.1.20 ]
+        os: [ ubuntu-latest, windows-latest, macos-latest ]
+
+    runs-on: ${{ matrix.os }}
 
     steps:
       - name: Checkout source repository
@@ -22,5 +24,15 @@ jobs:
           distribution: "zulu"
           java-version: ${{ matrix.java-version }}
 
+      - name: Download dependencies [examples]
+        working-directory: examples
+        run: ./bld download
+
       - name: Run tests
-        run: ./bld download compile test
+        run: ./bld compile test
+
+      - name: Compile and create the JAR
+        run: ./bld compile bootjar
+
+      - name: Compile and create the WAR
+        run: ./bld compile bootwar
