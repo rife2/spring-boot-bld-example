@@ -2,9 +2,6 @@ name: bld-ci
 
 on: [push, pull_request, workflow_dispatch]
 
-env:
-  KOTLIN_VERSION: "2.2.0"
-
 jobs:
   build-bld-project:
     strategy:
@@ -26,19 +23,14 @@ jobs:
           distribution: "zulu"
           java-version: ${{ matrix.java-version }}
 
-      - name: Setup Kotlin ${{ env.KOTLIN_VERSION }}
-        uses: fwilhe2/setup-kotlin@main
-        with:
-          version: ${{ env.KOTLIN_VERSION }}
-
       - name: Download dependencies [examples]
         run: ./bld download
 
       - name: Run tests
         run: ./bld compile test
 
-      - name: Compile and create the JAR
-        run: ./bld compile bootjar
+      - name: Create the JAR
+        run: ./bld bootjar
 
-      - name: Compile and create the WAR
-        run: ./bld compile bootwar
+      - name: Create the WAR
+        run: ./bld bootwar
