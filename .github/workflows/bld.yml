@@ -1,13 +1,13 @@
 name: bld-ci
 
-on: [ push, pull_request, workflow_dispatch ]
+on: [push, pull_request, workflow_dispatch]
 
 jobs:
   build-bld-project:
     strategy:
       matrix:
-        java-version: [ 17, 21, 24 ]
-        os: [ ubuntu-latest, windows-latest, macos-latest ]
+        java-version: [17, 21, 25]
+        os: [ubuntu-latest, windows-latest, macos-latest]
 
     runs-on: ${{ matrix.os }}
 
