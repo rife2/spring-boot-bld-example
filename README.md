@@ -64,5 +64,5 @@ java -jar build/dist/demoapplication-0.1.0-boot.war
 
 # Explore
 
-- [View Build File](https://github.com/rife2/spring-boot-bld-exampes/blob/main/src/bld/java/com/example/springboot/ApplicationBuild.java)
+- [View Build File](https://github.com/rife2/spring-boot-bld-example/blob/main/src/bld/java/com/example/springboot/ApplicationBuild.java)
 - [View Wrapper Properties](https://github.com/rife2/spring-boot-bld-example/blob/main/lib/bld/bld-wrapper.properties)
