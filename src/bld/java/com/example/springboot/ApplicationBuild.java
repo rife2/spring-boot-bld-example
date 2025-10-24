@@ -29,9 +29,9 @@ public class ApplicationBuild extends WebProject {
                 .include(dependency("org.springframework.boot:spring-boot-starter-web:3.5.6"));
         scope(test)
                 .include(dependency("org.springframework.boot:spring-boot-starter-test:3.5.6"))
-                .include(dependency("org.mockito:mockito-core:5.19.0"));
                 .include(dependency("org.junit.jupiter:junit-jupiter:6.0.0"))
                 .include(dependency("org.junit.platform:junit-platform-console-standalone:6.0.0"))
+                .include(dependency("org.mockito:mockito-core:5.20.0"));
         scope(standalone)
                 .include(dependency("org.springframework.boot:spring-boot-loader:3.5.6"));
 
