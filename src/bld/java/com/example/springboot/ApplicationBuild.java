@@ -24,16 +24,16 @@ public class ApplicationBuild extends WebProject {
         repositories = List.of(MAVEN_CENTRAL);
 
         scope(compile)
-                .include(dependency("org.springframework.boot:spring-boot-starter:3.5.7"))
-                .include(dependency("org.springframework.boot:spring-boot-starter-actuator:3.5.7"))
-                .include(dependency("org.springframework.boot:spring-boot-starter-web:3.5.7"));
+                .include(dependency("org.springframework.boot:spring-boot-starter:3.5.8"))
+                .include(dependency("org.springframework.boot:spring-boot-starter-actuator:3.5.8"))
+                .include(dependency("org.springframework.boot:spring-boot-starter-web:3.5.8"));
         scope(test)
-                .include(dependency("org.springframework.boot:spring-boot-starter-test:3.5.7"))
-                .include(dependency("org.junit.jupiter:junit-jupiter:6.0.0"))
-                .include(dependency("org.junit.platform:junit-platform-console-standalone:6.0.0"))
+                .include(dependency("org.springframework.boot:spring-boot-starter-test:3.5.8"))
+                .include(dependency("org.junit.jupiter:junit-jupiter:6.0.1"))
+                .include(dependency("org.junit.platform:junit-platform-console-standalone:6.0.1"))
                 .include(dependency("org.mockito:mockito-core:5.20.0"));
         scope(standalone)
-                .include(dependency("org.springframework.boot:spring-boot-loader:3.5.7"));
+                .include(dependency("org.springframework.boot:spring-boot-loader:3.5.8"));
 
         testOperation().javaOptions(List.of("-XX:+EnableDynamicAgentLoading"))
                 .javaOptions().enableNativeAccess("ALL-UNNAMED");
