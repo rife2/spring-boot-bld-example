@@ -13,7 +13,7 @@ jobs:
 
     steps:
       - name: Checkout source repository
-        uses: actions/checkout@v5.0.1
+        uses: actions/checkout@v6
         with:
           fetch-depth: 0
 
@@ -26,8 +26,11 @@ jobs:
       - name: Download dependencies [examples]
         run: ./bld download
 
+      - name: Compile source
+        run: ./bld compile
+
       - name: Run tests
-        run: ./bld compile test
+        run: ./bld test
 
       - name: Create the JAR
         run: ./bld bootjar

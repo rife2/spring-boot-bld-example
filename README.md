@@ -6,6 +6,9 @@ how Spring Boot can help you accelerate application development.
 
 This template is using the [Spring Boot Helper Extension](https://github.com/rife2/bld-spring-boot) for bld.
 
+This template is based on Spring Boot v4.0.x. An
+[example based on v3.5.x](https://github.com/rife2/bld-spring-boot/tree/main/examples/3.5.x) is also available
+
 ## Compile the Application
 
 To compile the web application, issue the following command:

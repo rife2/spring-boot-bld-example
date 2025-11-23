@@ -23,20 +23,20 @@ public class ApplicationBuild extends WebProject {
 
         repositories = List.of(MAVEN_CENTRAL);
 
+        var boot = version(4, 0, 0);
+        var junit = version(6, 0, 1);
         scope(compile)
-                .include(dependency("org.springframework.boot:spring-boot-starter:3.5.8"))
-                .include(dependency("org.springframework.boot:spring-boot-starter-actuator:3.5.8"))
-                .include(dependency("org.springframework.boot:spring-boot-starter-web:3.5.8"));
+                .include(dependency("org.springframework.boot", "spring-boot-starter", boot))
+                .include(dependency("org.springframework.boot", "spring-boot-starter-actuator", boot))
+                .include(dependency("org.springframework.boot", "spring-boot-starter-web", boot));
         scope(test)
-                .include(dependency("org.springframework.boot:spring-boot-starter-test:3.5.8"))
-                .include(dependency("org.junit.jupiter:junit-jupiter:6.0.1"))
-                .include(dependency("org.junit.platform:junit-platform-console-standalone:6.0.1"))
-                .include(dependency("org.mockito:mockito-core:5.20.0"));
+                .include(dependency("org.springframework.boot", "spring-boot-starter-test", boot))
+                .include(dependency("org.springframework.boot", "spring-boot-webmvc-test", boot))
+                .include(dependency("org.junit.jupiter", "junit-jupiter", junit))
+                .include(dependency("org.junit.platform", "junit-platform-console-standalone", junit))
+                .include(dependency("org.mockito", "mockito-core", version(5, 20, 0)));
         scope(standalone)
-                .include(dependency("org.springframework.boot:spring-boot-loader:3.5.8"));
-
-        testOperation().javaOptions(List.of("-XX:+EnableDynamicAgentLoading"))
-                .javaOptions().enableNativeAccess("ALL-UNNAMED");
+                .include(dependency("org.springframework.boot", "spring-boot-loader", boot));
     }
 
     public static void main(String[] args) {
