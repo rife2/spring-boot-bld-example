@@ -24,16 +24,19 @@ public class ApplicationBuild extends WebProject {
         repositories = List.of(MAVEN_CENTRAL);
 
         var boot = version(4, 0, 5);
-        var junit = version(6, 0, 3);
+        var junit = bom("org.junit", "junit-bom", version(6, 1, 3));
         scope(compile)
                 .include(dependency("org.springframework.boot", "spring-boot-starter", boot))
                 .include(dependency("org.springframework.boot", "spring-boot-starter-actuator", boot))
                 .include(dependency("org.springframework.boot", "spring-boot-starter-web", boot));
         scope(test)
+                .include(junit)
+                .include(dependency("org.springframework.boot", "spring-boot-starter-test"))
+                .include(dependency("org.springframework.boot", "spring-boot-webmvc-test"))
+                .include(dependency("org.junit.jupiter", "junit-jupiter"))
+                .include(dependency("org.junit.platform", "junit-platform-console-standalone", junit.version()))
                 .include(dependency("org.springframework.boot", "spring-boot-starter-test", boot))
                 .include(dependency("org.springframework.boot", "spring-boot-webmvc-test", boot))
-                .include(dependency("org.junit.jupiter", "junit-jupiter", junit))
-                .include(dependency("org.junit.platform", "junit-platform-console-standalone", junit))
                 .include(dependency("org.mockito", "mockito-core", version(5, 23, 0)));
         scope(standalone)
                 .include(dependency("org.springframework.boot", "spring-boot-loader", boot));
