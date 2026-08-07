@@ -11,6 +11,7 @@ import static rife.bld.dependencies.Repository.MAVEN_CENTRAL;
 import static rife.bld.dependencies.Scope.*;
 
 public class ApplicationBuild extends WebProject {
+
     public ApplicationBuild() {
         pkg = "com.example.demo";
         name = "DemoApplication";
@@ -23,23 +24,23 @@ public class ApplicationBuild extends WebProject {
 
         repositories = List.of(MAVEN_CENTRAL);
 
-        var boot = version(4, 0, 5);
+        var boot = bom("org.springframework.boot", "spring-boot-dependencies", version(4, 1, 1));
         var junit = bom("org.junit", "junit-bom", version(6, 1, 3));
         scope(compile)
-                .include(dependency("org.springframework.boot", "spring-boot-starter", boot))
-                .include(dependency("org.springframework.boot", "spring-boot-starter-actuator", boot))
-                .include(dependency("org.springframework.boot", "spring-boot-starter-web", boot));
+                .include(boot)
+                .include(dependency("org.springframework.boot", "spring-boot-starter"))
+                .include(dependency("org.springframework.boot", "spring-boot-starter-actuator"))
+                .include(dependency("org.springframework.boot", "spring-boot-starter-web"));
+        scope(standalone)
+                .include(boot)
+                .include(dependency("org.springframework.boot", "spring-boot-loader"));
         scope(test)
                 .include(junit)
                 .include(dependency("org.springframework.boot", "spring-boot-starter-test"))
                 .include(dependency("org.springframework.boot", "spring-boot-webmvc-test"))
                 .include(dependency("org.junit.jupiter", "junit-jupiter"))
                 .include(dependency("org.junit.platform", "junit-platform-console-standalone", junit.version()))
-                .include(dependency("org.springframework.boot", "spring-boot-starter-test", boot))
-                .include(dependency("org.springframework.boot", "spring-boot-webmvc-test", boot))
                 .include(dependency("org.mockito", "mockito-core", version(5, 23, 0)));
-        scope(standalone)
-                .include(dependency("org.springframework.boot", "spring-boot-loader", boot));
     }
 
     public static void main(String[] args) {

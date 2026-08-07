@@ -4,10 +4,8 @@ Based on the Spring Guides' Spring Boot web application example. Please be sure
 to read the [guide](https://spring.io/guides/gs/spring-boot/) for a sampling of
 how Spring Boot can help you accelerate application development.
 
-This template is using the [Spring Boot Helper Extension](https://github.com/rife2/bld-spring-boot) for bld.
-
-This template is based on Spring Boot v4.0.x. An
-[example based on v3.5.x](https://github.com/rife2/bld-spring-boot/tree/main/examples/3.5.x) is also available
+This template is using the [Spring Boot Helper Extension](https://github.com/rife2/bld-spring-boot) for bld and
+**Spring Boot 4.1.x**.
 
 ## Compile the Application
 
