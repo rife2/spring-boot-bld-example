@@ -40,7 +40,7 @@ public class ApplicationBuild extends WebProject {
                 .include(dependency("org.springframework.boot", "spring-boot-webmvc-test"))
                 .include(dependency("org.junit.jupiter", "junit-jupiter"))
                 .include(dependency("org.junit.platform", "junit-platform-console-standalone", junit.version()))
-                .include(dependency("org.mockito", "mockito-core", version(5, 23, 0)));
+                .include(dependency("org.mockito", "mockito-core", version(5, 24, 0)));
     }
 
     public static void main(String[] args) {
