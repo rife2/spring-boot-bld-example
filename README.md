@@ -5,7 +5,7 @@ to read the [guide](https://spring.io/guides/gs/spring-boot/) for a sampling of
 how Spring Boot can help you accelerate application development.
 
 This template is using the [Spring Boot Helper Extension](https://github.com/rife2/bld-spring-boot) for bld and
-**Spring Boot 4.1.x**.
+**Spring Boot 4.2.x**.
 
 ## Compile the Application
 

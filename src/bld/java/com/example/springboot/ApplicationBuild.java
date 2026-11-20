@@ -24,7 +24,7 @@ public class ApplicationBuild extends WebProject {
 
         repositories = List.of(MAVEN_CENTRAL);
 
-        var boot = bom("org.springframework.boot", "spring-boot-dependencies", version(4, 1, 2));
+        var boot = bom("org.springframework.boot", "spring-boot-dependencies", version(4, 2, 0));
         var junit = bom("org.junit", "junit-bom", version(6, 1, 3));
         scope(compile)
                 .include(boot)
